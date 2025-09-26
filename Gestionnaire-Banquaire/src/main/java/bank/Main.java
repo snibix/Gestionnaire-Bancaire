@@ -100,7 +100,16 @@ public class Main {
                 }
 
                 case 5 -> {
+                    System.out.println("Votre numéro de compte ?");
+                    int accountSource = sc.nextInt();
 
+                    System.out.println("Le numéro du compte du destinataire ?");
+                    int accountDest = sc.nextInt();
+
+                    System.out.println("Montant du virement ?");
+                    double montant = sc.nextDouble();
+                    sc.nextLine();
+                    bankServices.transaction(accountSource, accountDest, montant);
                 }
 
                 case 6 -> {
