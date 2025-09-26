@@ -6,12 +6,16 @@ import java.util.List;
 public class Customer {
   private String name;
   private String mail;
+  private int phone;
+  private int age;
   private List<Account> account;
 
   // Contructor
-  public Customer(String name, String mail) {
+  public Customer(String name, String mail, int phone, int age) {
     this.name = name;
     this.mail = mail;
+    this.phone = phone;
+    this.age = age;
     this.account = new ArrayList<>();
   }
 
@@ -31,6 +35,24 @@ public class Customer {
 
   public void setMail(String mail) {
     this.mail = mail;
+  }
+
+  // Phone
+  public int getPhone() {
+    return phone;
+  }
+
+  public void setPhone(int phone) {
+    this.phone = phone;
+  }
+
+  // Age
+  public int getAge() {
+    return age;
+  }
+
+  public void setAge(int age) {
+    this.age = age;
   }
 
   // Account

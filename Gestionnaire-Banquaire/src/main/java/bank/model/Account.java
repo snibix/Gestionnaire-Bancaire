@@ -1,12 +1,13 @@
 package bank.model;
 
 public class Account {
-  private double accountNumber;
+  private int counter = 1;
+  private int accountNumber;
   private double pay;
   private String transactionHistory;
 
-  public Account(double accountNumber, double pay, String transactionHistory) {
-    this.accountNumber = accountNumber;
+  public Account(double pay) {
+    this.accountNumber = counter++;
     this.pay = pay;
     this.transactionHistory = transactionHistory;
   }
@@ -16,7 +17,7 @@ public class Account {
     return accountNumber;
   }
 
-  public void setAccountNumber(double accountNumber) {
+  public void setAccountNumber(int accountNumber) {
     this.accountNumber = accountNumber;
   }
 
@@ -36,6 +37,11 @@ public class Account {
 
   public void setTransactionHistory(String transactionHistory) {
     this.transactionHistory = transactionHistory;
+  }
+
+  @Override
+  public String toString() {
+    return "[" + pay + "]";
   }
 
 }
