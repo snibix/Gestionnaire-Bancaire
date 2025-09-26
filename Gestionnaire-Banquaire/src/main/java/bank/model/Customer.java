@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Customer {
+  private int counter = 1;
+  private int id;
   private String name;
   private String mail;
   private int phone;
@@ -12,11 +14,20 @@ public class Customer {
 
   // Contructor
   public Customer(String name, String mail, int phone, int age) {
+    this.id = counter++;
     this.name = name;
     this.mail = mail;
     this.phone = phone;
     this.age = age;
     this.account = new ArrayList<>();
+  }
+
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
   }
 
   // Name

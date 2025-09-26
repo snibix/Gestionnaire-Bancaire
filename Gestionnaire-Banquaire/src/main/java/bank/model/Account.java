@@ -6,10 +6,8 @@ public class Account {
   private double pay;
   private String transactionHistory;
 
-  public Account(double pay) {
+  public Account() {
     this.accountNumber = counter++;
-    this.pay = pay;
-    this.transactionHistory = transactionHistory;
   }
 
   // AccountNumber
